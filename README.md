@@ -1,43 +1,40 @@
-# Astro Starter Kit: Minimal
+# Dannover Portfolio
 
-```sh
-npm create astro@latest -- --template minimal
+Portfolio personal de **Dannover**: desarrollador y fotógrafo. La página principal divide la pantalla en dos mitades: la izquierda para proyectos de **Developer** y la derecha para la galería de **Fotógrafo**, con un diseño inspirado en layouts de showcase a pantalla completa.
+
+## Stack
+
+- **[Astro](https://astro.build)** – Sitio estático
+- **[Tailwind CSS](https://tailwindcss.com)** – Estilos (vía `@tailwindcss/vite`)
+- **Google Fonts (Syne)** – Tipografía principal
+
+## Estructura del proyecto
+
+```
+src/
+├── styles/
+│   └── global.css          # Estilos globales + Tailwind
+└── pages/
+    ├── index.astro         # Home: dos paneles (Developer | Fotógrafo)
+    ├── developer/
+    │   └── index.astro     # Sección Developer
+    └── fotografo/
+        └── index.astro     # Sección Fotógrafo
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- **Home:** header fijo, dos paneles a pantalla completa (imagen de fondo + overlay de texto) y footer con barra de progreso.
+- **Developer / Fotógrafo:** páginas de sección con navegación de vuelta al inicio.
 
-## 🚀 Project Structure
+## Comandos
 
-Inside of your Astro project, you'll see the following folders and files:
+| Comando        | Acción                    |
+|----------------|---------------------------|
+| `npm run dev`  | Servidor de desarrollo    |
+| `npm run build`| Build estático            |
+| `npm run preview` | Vista previa del build |
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Personalización
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Imágenes de fondo:** sustituir las URLs en `src/pages/index.astro` (o usar imágenes en `public/`).
+- **Contenido:** editar los textos y enlaces en cada panel y en las páginas `developer` y `fotografo`.
+- **Colores:** las secciones usan acentos emerald (Developer) y violet (Fotógrafo); se pueden cambiar en las clases de Tailwind.
